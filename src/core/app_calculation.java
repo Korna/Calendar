@@ -25,8 +25,6 @@ public class app_calculation {
         b += app_database.amount_month(month, false);
         b += day;
         System.out.printf("\nAmount of days:%d\n", b);
-        //ewe nujno mesiac schitat
-        //a = 730502 % 7 - 3;
         a = (730503 + b) % 7;
 
 
