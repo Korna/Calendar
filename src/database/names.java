@@ -30,4 +30,10 @@ public class names {
         return names[a];
     }
 
+    public static String moon_phase(int a){
+        a--;
+        String names[] = {"New moon", "Waxing crescent", "First quarter", "Waxing gibbous", "Full moon", "Waning gibbous", "Third quarter", "Waning crescent"};
+        return names[a];
+    }
+
 }
