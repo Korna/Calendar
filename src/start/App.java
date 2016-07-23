@@ -24,18 +24,25 @@ public class App {
 
     public App() {
         button1.addActionListener(new ActionListener() {
+
+
+
             @Override
             public void actionPerformed(ActionEvent e) {
-                int day = -1, month = -1, year = -1;
-                if (e.getSource()==button1) {
-                    day = Integer.parseInt(textField1.getText());
-                    month = Integer.parseInt(textField2.getText());
-                    year = Integer.parseInt(textField3.getText());
-                }
-                String temp = functions.app_database.astro_sign(day, month);
-                temp += "\n" + core.app_calculation.calc_day_of_week(day, month, year);
-                temp += "\n" + core.app_calculation.calc_moon_phase(day, month, year);
-                JOptionPane.showMessageDialog(null, temp);
+                try {
+
+
+                    int day = -1, month = -1, year = -1;
+                    if (e.getSource() == button1) {
+                        day = Integer.parseInt(textField1.getText());
+                        month = Integer.parseInt(textField2.getText());
+                        year = Integer.parseInt(textField3.getText());
+                    }
+                    String temp = functions.app_database.astro_sign(day, month);
+                    temp += "\n" + core.app_calculation.calc_day_of_week(day, month, year);
+                    temp += "\n" + core.app_calculation.calc_moon_phase(day, month, year);
+                    JOptionPane.showMessageDialog(null, temp);
+                }catch (Exception global_exception){JOptionPane.showMessageDialog(null, "Input correct digit in field."); }
             }
         });
     }
