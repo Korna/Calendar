@@ -20,11 +20,9 @@ public class app_calculation {
         int a = 0, b = 0;
         int i;
         b = (year / 4);
-        System.out.printf("\nDigit of all leap years is:%d\n", b);
         b +=  year  * 365;
         b += app_database.amount_month(month, false);
         b += day;
-        System.out.printf("\nAmount of days:%d\n", b);
         a = (4 + b) % 7;
         return database.names.day_of_week(++a);
     }
@@ -38,7 +36,6 @@ public class app_calculation {
         b += app_database.amount_month(month, false);
         b += day;
         a = (25.5305882 + b - 1.8456617625) % p1;
-        System.out.printf("\nMoon day:%g\n", a);
         return database.names.moon_phase(functions.app_database.day_moon_form(a));
         
     }
